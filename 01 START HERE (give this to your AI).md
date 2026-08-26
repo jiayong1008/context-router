@@ -38,6 +38,14 @@ Four files at the vault root that let any AI agent navigate this person's notes 
 - Keep it under fifteen minutes. You can always add projects later.
 - Write the files as you go, at the end of each round. Don't hold everything to the end.
 
+**Assume they are not technical.** Many people setting this up have never deliberately edited a markdown file. So:
+
+- No jargon. Don't say "vault root", "YAML", "frontmatter", or "the repo". Say "your main notes folder".
+- When they need to save something, give the exact filename and the exact folder, plainly: *"Create a file called `MEMORY.md` in your main notes folder and paste this in."*
+- **If they have no project folders yet, that's normal.** Don't treat it as a problem. After Round 2, offer a simple folder structure based on what they told you, and get their approval before creating anything.
+- If they seem lost, drop to one question at a time.
+- Never make them feel behind for not knowing something.
+
 ---
 
 ### Round 1 — Who they are
