@@ -2,6 +2,9 @@
 
 *Lean index — loaded every session. Detail lives in `_CONTEXT.md` files, not here.*
 
+> **Trigger words live in `CLAUDE.md`'s routing map, not here.** Check there before
+> telling someone you don't know a project.
+>
 > **Keep this to one screen.** If an entry wants a second paragraph, it belongs in
 > a project's `_CONTEXT.md` instead. A bloated memory file makes every single
 > conversation heavier and less focused — this is the most common way the system

@@ -20,6 +20,8 @@ Yes, if you keep notes in files and you use AI regularly. You do **not** need to
 
 ## Quick start
 
+*Three steps. Nothing to install.*
+
 ### Step 1 — Get the files
 
 Green **Code** button at the top of this page → **Download ZIP** → unzip it.
@@ -40,7 +42,7 @@ Say this, exactly:
 
 Your AI will ask you questions — what you're working on, who's involved, what you'd actually type when you mean each project — and write your files from your answers.
 
-**Takes about 15 minutes.** You don't fill in any templates yourself.
+**About 15 minutes for a couple of projects; nearer half an hour if you have several.** You don't fill in any templates yourself.
 
 ---
 
@@ -53,6 +55,8 @@ Both end in the same place. Pick whichever matches how you use AI.
 *Claude Code, Codex, Cursor — tools that run on your computer and read your files.*
 
 Open the tool **in your notes folder**, then say the sentence from Step 3. It writes every file for you, in the right place. Done.
+
+Tools differ in whether they pick up a rules file on their own: Claude Code reads `CLAUDE.md` automatically, and several others read `AGENTS.md` — both ship in the kit, so one of them usually lands. If yours does neither, just say *"read CLAUDE.md first"* at the start of a session and everything else works the same.
 
 ### Path B — you chat with AI in a browser or app
 
@@ -67,9 +71,13 @@ Your AI can't reach your folder, so you hand it the files:
 
 After that, at the start of a conversation, upload or paste `MEMORY.md` plus the one project file you're working on.
 
-> **Path B is where most people start, and it's completely fine.** If you later switch to a
-> tool that reads your folder directly, everything you built still works — that's the whole
-> point of keeping it in plain markdown.
+> **Being straight about Path B:** your AI can't go and fetch files, so *you* pick which
+> project file to hand it. What you get here is a reusable, well-organised context pack
+> rather than automatic lookup — you stop re-explaining your projects, but you're still the
+> one opening the drawer. Automatic routing needs Path A.
+>
+> Most people start here anyway, and that's fine. Everything you build still works if you
+> later switch to a tool that reads your folder — that's the point of plain markdown.
 
 ---
 
@@ -83,6 +91,8 @@ Use only the project's nickname — don't tell it which file to read.
 
 - ✅ **It works** if the AI pulls up that project's details and answers from them.
 - ❌ **Needs a tweak** if it says it doesn't know, or starts reading everything. Your trigger words are too narrow — open `CLAUDE.md`, find the routing table, and add the words you actually just used.
+
+**Also worth 30 seconds:** open `MEMORY.md` and `CLAUDE.md` yourself and look at them. The routing table should have one row per project, and `MEMORY.md` should describe you and your work. AI assistants sometimes say they've written a file when they haven't — a quick look is the only way to catch that.
 
 ---
 

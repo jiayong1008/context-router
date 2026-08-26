@@ -24,7 +24,14 @@ Four files at the vault root that let any AI agent navigate this person's notes 
 | `MEMORY.md` | Lean always-loaded index: who they are, what's active, who matters. |
 | `[Project]/_CONTEXT.md` | Deep detail for one project. Loaded only when relevant. |
 
-`CLAUDE.md` and `AGENTS.md` are already written and need no changes. Your job is `MEMORY.md`, the routing table inside `CLAUDE.md`, and one `_CONTEXT.md` per active project.
+**What you edit, exactly:**
+
+- `MEMORY.md` — fill in every section.
+- `CLAUDE.md` — fill in **the routing table** and **the Preferences list**. Leave the rest of the file (the rules, the pruning table) exactly as it is.
+- One `_CONTEXT.md` per active project, built from `_TEMPLATE_CONTEXT.md`.
+- `AGENTS.md` — never. It's a pointer and needs nothing.
+
+The routing table starts empty. Filling it in is the single most important thing you do here — if you leave it blank, nothing works.
 
 ---
 
@@ -35,16 +42,17 @@ Four files at the vault root that let any AI agent navigate this person's notes 
 - Ask in small batches — three to five questions at a time, never a wall of them.
 - Ask follow-ups when an answer is vague. "Client work" is not enough; you need the client's name and what you'd actually type when you mean them.
 - Never invent a fact. If something stays unclear, write `unknown — ask me` in the file. That is a feature: it tells the agent to ask instead of guessing later.
-- Keep it under fifteen minutes. You can always add projects later.
+- Budget roughly 15 minutes for the first two projects, plus 3–5 minutes for each one after that. Tell them the running total as you go, so they can stop and finish the rest later instead of losing patience halfway.
 - Write the files as you go, at the end of each round. Don't hold everything to the end.
 
 **Assume they are not technical.** Many people setting this up have never deliberately edited a markdown file. So:
 
 - No jargon. Don't say "vault root", "YAML", "frontmatter", or "the repo". Say "your main notes folder".
 - When they need to save something, give the exact filename and the exact folder, plainly: *"Create a file called `MEMORY.md` in your main notes folder and paste this in."*
-- **If they have no project folders yet, that's normal.** Don't treat it as a problem. After Round 2, offer a simple folder structure based on what they told you, and get their approval before creating anything.
+- **If they have no project folders yet, that's normal.** Don't treat it as a problem — see the folder step at the end of Round 2. Never invent a folder structure without approval.
 - If they seem lost, drop to one question at a time.
 - Never make them feel behind for not knowing something.
+- **Notice what's already in their folder.** If loose notes are sitting there from before, don't silently ignore them — ask whether any belong to a project you've just set up, and whether anything in them is a live commitment worth capturing as an open item.
 
 ---
 
@@ -74,6 +82,8 @@ Aim for three to six projects. If they name more than eight, ask which ones they
 
 Write one row per project into the `## Active projects` table in `MEMORY.md`.
 
+**Then settle folders once, here — not later.** Check whether each project already has its own folder. For any that don't, propose plain folder names, get a yes, and create them. Use those same folders for the rest of the interview and don't raise the question again.
+
 ---
 
 ### Round 3 — Trigger words (the important one)
@@ -99,7 +109,7 @@ Now create `_CONTEXT.md` for each project. Use `_TEMPLATE_CONTEXT.md` as the sha
 3. What's open — what actually needs doing next?
 4. What are you unsure about, or waiting on someone for?
 
-Put the project's file at `[wherever that project's folder lives]/_CONTEXT.md`. If the project has no folder yet, ask where they want it, or create one.
+Put the project's file at `[that project's folder]/_CONTEXT.md`, using the folders you agreed at the end of Round 2.
 
 Anything they can't answer becomes a line under `## What I Don't Know Yet`.
 
@@ -118,10 +128,11 @@ Write these into `## Key people` and `## Routines` in `MEMORY.md`.
 
 ## When you're done
 
-1. Show them the finished `MEMORY.md` and the routing table, and ask what's wrong. There will be something.
-2. Make sure every file has actually landed somewhere — either you wrote it, or they saved it. Confirm the paths out loud.
-3. Tell them to test it cold: open a brand-new session and ask *"what's the status on [project]?"* using only a trigger word. If the right context comes up and the answer is drawn from it, it works. If not, the trigger words need more entries.
-4. Tell them they can delete this file, or keep it for adding projects later.
+1. **Verify, don't assume.** Open each file you claim to have written and confirm it holds real content — not placeholders, not an empty routing table, not a mangled markdown table. Say the exact path of each one. If you're in a chat window and they saved the files themselves, ask them to confirm each file exists before you call it done.
+2. Show them the finished `MEMORY.md` and the routing table, and ask what's wrong. There will be something.
+3. **Offer to delete `Projects/_EXAMPLE Nova`** now that they have their own projects — it's a leftover example, and leaving it creates a context file with no routing row.
+4. Tell them to test it cold: open a brand-new session and ask *"what's the status on [project]?"* using only a trigger word. If the right context comes up and the answer is drawn from it, it works. If not, the trigger words need more entries.
+5. Tell them they can delete this file, or keep it for adding projects later.
 
 ---
 

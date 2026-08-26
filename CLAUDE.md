@@ -23,12 +23,14 @@
 
 *Read the project's `_CONTEXT.md` when I mention any of these.*
 
+<!-- Setup adds one row per project directly below the header row. -->
+
 | Project | Trigger words | Context file |
 | :------ | :------------ | :----------- |
-| | | |
 
-> Filled in during setup — see `START-HERE.md`. Trigger words should be what you'd
-> actually type in a rush: short names, client names, teammate names, product names.
+> Empty until setup fills it in — see `01 START HERE (give this to your AI).md`.
+> Trigger words should be whatever you'd actually type in a rush: short names,
+> client names, teammate names, product names, and shorthand you use often.
 
 ## Creating a new project
 
@@ -64,7 +66,7 @@ The goal: every line in every one of these files is true and useful *right now*.
 
 *Filled in during setup — how I want you to respond.*
 
--
+<!-- Setup replaces this line with real preferences. -->
 
 ---
 *Context Router — pattern by Lim Jia Yong · @JiaYongLim1008*
