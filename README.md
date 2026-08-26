@@ -95,8 +95,30 @@ Use only the project's nickname — don't tell it which file to read.
 | `AGENTS.md` | Same thing, different filename, so other AI tools find it | No |
 | `MEMORY.md` | Short always-loaded index: you, your projects, key people | Your AI fills it in |
 | `_TEMPLATE_CONTEXT.md` | The shape each project's file takes | No — it's a blueprint |
-| `Projects/_EXAMPLE Nova/` | A filled-in example so you can see a real one | Delete it when you're done looking |
+| `Projects/_EXAMPLE Nova/` | A filled-in example so you can see what a real one looks like | Delete it once you've looked |
 
+> **Your own projects don't go in a `Projects/` folder.** They stay wherever they
+> already live — `Work/Clients/Nova/`, `Uni/Thesis/`, whatever you already use. Each
+> one just gets a `_CONTEXT.md` inside it. The `Projects/` folder here exists only to
+> hold the example, and you can delete the whole thing.
+
+---
+
+## Using it day to day
+
+Setup happens once. After that:
+
+**If your AI reads your folder** (Claude Code, Codex, Cursor) — open it in your notes folder and just start talking. It reads the rules and your index on its own. Nothing to paste, nothing to remember.
+
+**If you chat in a browser** — put `CLAUDE.md` and `MEMORY.md` into a Project once, and they're there for every future chat. Add the one `_CONTEXT.md` you're working on when you need depth. If your tool has no Projects feature, paste `MEMORY.md` at the start of a conversation.
+
+Then it's just normal conversation:
+
+- *"What's the status on Nova?"* — it opens Nova's file and answers from it.
+- *"Remember that Priya approved the SMS wording."* — it writes that to the right file and tells you which.
+- *"I'm starting a new project with a client called Atlas."* — it creates the context file, adds a routing row, and adds a memory line, without being asked.
+
+You never say which file to open. That's the whole point.
 ---
 
 ## How it actually works
