@@ -106,6 +106,7 @@ Use only the project's nickname — don't tell it which file to read.
 | `MEMORY.md` | Short always-loaded index: you, your projects, key people | Your AI fills it in |
 | `_TEMPLATE_CONTEXT.md` | The shape each project's file takes | No — it's a blueprint |
 | `Projects/_EXAMPLE Nova/` | A filled-in example so you can see what a real one looks like | Delete it once you've looked |
+| `check-routing.py` | Finds projects missing from your routing table, and rows pointing at files that are gone | No, just run it |
 
 > **Your own projects don't go in a `Projects/` folder.** They stay wherever they
 > already live — `Work/Clients/Nova/`, `Uni/Thesis/`, whatever you already use. Each
@@ -167,6 +168,25 @@ Small habits. The system rots without them.
 | A project vanished from the routing table | Normal drift — it got created mid-conversation and never indexed | That's what the monthly skim is for |
 
 ---
+
+## Catching drift
+
+The routing table is maintained by hand, so it goes stale. Projects get created mid-conversation and never indexed; projects end and their rows linger. Both are quiet failures: the AI simply never finds a file, and you assume it looked.
+
+There's a script for that:
+
+```
+python3 check-routing.py /path/to/your/notes
+```
+
+No dependencies, nothing installed. It reports two things:
+
+- **Not routed** — a project has a `_CONTEXT.md` but nothing in the table points at it. Your AI will never find it on its own.
+- **Dead rows** — the table points at a file that isn't there any more. The project moved, or ended.
+
+Run it monthly, or whenever answers start feeling stale. It exits 0 when clean, so you can wire it into whatever you already run.
+
+It finds the routing table even if you keep a thin `CLAUDE.md` at the root and the real table one folder down, and it ignores the example rows in this kit's own templates.
 
 ## Honest limits
 
